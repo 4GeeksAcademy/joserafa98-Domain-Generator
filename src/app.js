@@ -18,7 +18,3 @@ window.onload = function() {
     }
   }
 };
-
-// pasos a resolver:
-//1. establecer mis variables
-//2.
