@@ -9,9 +9,10 @@ window.onload = function() {
   let pronoun = ["the", "a", "you"];
   let adj = ["big", "small", "first", "last"];
   let noun = ["racoon", "house", "phone"];
-  let results = " ";
+  let results = "";
 
   function DomainGenerator() {
+    results = ""; // Reset results to avoid appending old results
     for (let i = 0; i < pronoun.length; i++) {
       for (let j = 0; j < adj.length; j++) {
         for (let k = 0; k < noun.length; k++) {
@@ -23,37 +24,48 @@ window.onload = function() {
     }
     return results;
   }
+
   document.querySelector("#botonResultado").addEventListener("click", () => {
     let resultado = document.querySelector("#domain");
     resultado.innerHTML = DomainGenerator();
   });
-};
-//document.querySelector("#addPronoun").addEventListener("click", () => {
-// let newPronoun = document.querySelector("#newPronoun").value;
-//if (newPronoun) {
-//pronoun.push(newPronoun);
-// document.querySelector("#newPronoun").value = "";
-//}
-//});
-//document.querySelector("#addAdj").addEventListener("click", () => {
-//let newAdj = document.querySelector("#newAdj").value;
-//if (newAdj) {
-//adj.push(newAdj);
-//document.querySelector("#newAdj").value = "";
-//}
-//});
-//document.querySelector("#addNoun").addEventListener("click", () => {
-//let newNoun = document.querySelector("#newNoun").value;
-//if (newNoun) {
-//noun.push(newNoun);
-//document.querySelector("#newNoun").value = "";
-//}
-//});
 
-//document.querySelector("#deletePronoun").addEventListener("click", () => {
-//let newPronoun = document.querySelector("#newPronoun").value;
-//if (newPronoun) {
-//pronoun.splice(newPronoun);
-//document.querySelector("#newPronoun").value = "";
-//}
-//});
+  function addWordTo(array) {
+    let newWord = document.querySelector("#newWord").value;
+    if (newWord) {
+      array.push(newWord);
+      document.querySelector("#newWord").value = "";
+    }
+  }
+
+  function deleteWordFrom(array) {
+    let newWord = document.querySelector("#newWord").value;
+    if (newWord) {
+      let index = array.indexOf(newWord);
+      if (index > -1) {
+        array.splice(index, 1);
+      }
+      document.querySelector("#newWord").value = "";
+    }
+  }
+
+  document
+    .querySelector("#addToPronoun")
+    .addEventListener("click", () => addWordTo(pronoun));
+  document
+    .querySelector("#addToAdj")
+    .addEventListener("click", () => addWordTo(adj));
+  document
+    .querySelector("#addToNoun")
+    .addEventListener("click", () => addWordTo(noun));
+
+  document
+    .querySelector("#deleteFromPronoun")
+    .addEventListener("click", () => deleteWordFrom(pronoun));
+  document
+    .querySelector("#deleteFromAdj")
+    .addEventListener("click", () => deleteWordFrom(adj));
+  document
+    .querySelector("#deleteFromNoun")
+    .addEventListener("click", () => deleteWordFrom(noun));
+};
