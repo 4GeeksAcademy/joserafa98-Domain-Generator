@@ -49,23 +49,11 @@ window.onload = function() {
     }
   }
 
-  document
-    .querySelector("#addToPronoun")
-    .addEventListener("click", () => addWordTo(pronoun));
-  document
-    .querySelector("#addToAdj")
-    .addEventListener("click", () => addWordTo(adj));
-  document
-    .querySelector("#addToNoun")
-    .addEventListener("click", () => addWordTo(noun));
+  document.querySelector("#addToPronoun").addEventListener("click", () => addWordTo(pronoun));
+  document.querySelector("#addToAdj").addEventListener("click", () => addWordTo(adj));
+  document.querySelector("#addToNoun").addEventListener("click", () => addWordTo(noun));
 
-  document
-    .querySelector("#deleteFromPronoun")
-    .addEventListener("click", () => deleteWordFrom(pronoun));
-  document
-    .querySelector("#deleteFromAdj")
-    .addEventListener("click", () => deleteWordFrom(adj));
-  document
-    .querySelector("#deleteFromNoun")
-    .addEventListener("click", () => deleteWordFrom(noun));
+  document.querySelector("#deleteFromPronoun").addEventListener("click", () => deleteWordFrom(pronoun));
+  document.querySelector("#deleteFromAdj").addEventListener("click", () => deleteWordFrom(adj));
+  document.querySelector("#deleteFromNoun").addEventListener("click", () => deleteWordFrom(noun));
 };
