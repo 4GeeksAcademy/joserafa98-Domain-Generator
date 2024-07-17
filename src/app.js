@@ -23,29 +23,37 @@ window.onload = function() {
     }
     return results;
   }
-  document.querySelector("#botonresultado").addEventListener("click", () => {
+  document.querySelector("#botonResultado").addEventListener("click", () => {
     let resultado = document.querySelector("#domain");
     resultado.innerHTML = DomainGenerator();
   });
-  document.querySelector("#addPronoun").addEventListener("click", () => {
-    let newPronoun = document.querySelector("#newPronoun").value;
-    if (newPronoun) {
-      pronoun.push(newPronoun);
-      document.querySelector("#newPronoun").value = "";
-    }
-  });
-  document.querySelector("#addAdj").addEventListener("click", () => {
-    let newAdj = document.querySelector("#newAdj").value;
-    if (newAdj) {
-      adj.push(newAdj);
-      document.querySelector("#newAdj").value = "";
-    }
-  });
-  document.querySelector("#addNoun").addEventListener("click", () => {
-    let newNoun = document.querySelector("#newNoun").value;
-    if (newNoun) {
-      noun.push(newNoun);
-      document.querySelector("#newNoun").value = "";
-    }
-  });
 };
+//document.querySelector("#addPronoun").addEventListener("click", () => {
+// let newPronoun = document.querySelector("#newPronoun").value;
+//if (newPronoun) {
+//pronoun.push(newPronoun);
+// document.querySelector("#newPronoun").value = "";
+//}
+//});
+//document.querySelector("#addAdj").addEventListener("click", () => {
+//let newAdj = document.querySelector("#newAdj").value;
+//if (newAdj) {
+//adj.push(newAdj);
+//document.querySelector("#newAdj").value = "";
+//}
+//});
+//document.querySelector("#addNoun").addEventListener("click", () => {
+//let newNoun = document.querySelector("#newNoun").value;
+//if (newNoun) {
+//noun.push(newNoun);
+//document.querySelector("#newNoun").value = "";
+//}
+//});
+
+//document.querySelector("#deletePronoun").addEventListener("click", () => {
+//let newPronoun = document.querySelector("#newPronoun").value;
+//if (newPronoun) {
+//pronoun.splice(newPronoun);
+//document.querySelector("#newPronoun").value = "";
+//}
+//});
