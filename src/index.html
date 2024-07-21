@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
+    <title>Domain Generator</title>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
@@ -16,61 +16,40 @@
     <div class="container-fluid text-center">
       <h1 class="mt-5">Generate your Domain here</h1>
 
-      <form>
-        <div class="mb-3 w-50 mx-auto">
-          <label for="formGroupExampleInput" class="form-label"
-            >Add a pronoun</label
-          >
-          <input
-            type="text"
-            class="form-control"
-            id="newPronoun"
-            placeholder="add any pronoun here"
-          />
-          <button type="button" class="btn btn-warning m-2" id="addPronoun">
-            Add right now!
-          </button>
-          <button type="button" class="btn btn-warning m-2" id="deletePronoun">
-            Delete right now!
-          </button>
-        </div>
-        <div class="form-check form-switch">
-          <input
-            class="form-check-input"
-            type="checkbox"
-            role="switch"
-            id="newPronounCheckbox"
-            value="wheretoadd"
-          />
-          <label class="form-check-label" for="flexSwitchCheckDefault"
-            >Add to Pronoun</label
-          >
-        </div>
-        <div class="form-check form-switch">
-          <input
-            class="form-check-input"
-            type="checkbox"
-            role="switch"
-            id="newAdjCheckbox"
-            value="wheretoadd"
-          />
-          <label class="form-check-label" for="flexSwitchCheckDefault"
-            >Add to Adj</label
-          >
-        </div>
-        <div class="form-check form-switch">
-          <input
-            class="form-check-input"
-            type="checkbox"
-            role="switch"
-            id="newNounCheckbox"
-            value="wheretoadd"
-          />
-          <label class="form-check-label" for="flexSwitchCheckDefault"
-            >Add to Noun</label
-          >
-        </div>
-      </form>
+      <div class="mb-3 w-50 mx-auto">
+        <label for="newWord" class="form-label">Add a word</label>
+        <input
+          type="text"
+          class="form-control"
+          id="newWord"
+          placeholder="Add any word here"
+        />
+      </div>
+
+      <div class="mb-3 w-50 mx-auto">
+        <button type="button" class="btn btn-warning m-2" id="addToPronoun">
+          Add to Pronoun
+        </button>
+        <button type="button" class="btn btn-warning m-2" id="addToAdj">
+          Add to Adj
+        </button>
+        <button type="button" class="btn btn-warning m-2" id="addToNoun">
+          Add to Noun
+        </button>
+      </div>
+
+      <div class="mb-3 w-50 mx-auto">
+        <button type="button" class="btn btn-danger m-2" id="deleteFromPronoun">
+          Delete from Pronoun
+        </button>
+        <button type="button" class="btn btn-danger m-2" id="deleteFromAdj">
+          Delete from Adj
+        </button>
+        <button type="button" class="btn btn-danger m-2" id="deleteFromNoun">
+          Delete from Noun
+        </button>
+      </div>
+
       <p class="alert alert-warning mt-4" id="domain">
         Here is your <b>Future</b> domain!
       </p>

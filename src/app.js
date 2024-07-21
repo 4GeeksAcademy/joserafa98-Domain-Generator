@@ -12,7 +12,7 @@ window.onload = function() {
   let results = "";
 
   function DomainGenerator() {
-    results = ""; // Reset results to avoid appending old results
+    results = "";
     for (let i = 0; i < pronoun.length; i++) {
       for (let j = 0; j < adj.length; j++) {
         for (let k = 0; k < noun.length; k++) {
@@ -49,11 +49,23 @@ window.onload = function() {
     }
   }
 
-  document.querySelector("#addToPronoun").addEventListener("click", () => addWordTo(pronoun));
-  document.querySelector("#addToAdj").addEventListener("click", () => addWordTo(adj));
-  document.querySelector("#addToNoun").addEventListener("click", () => addWordTo(noun));
+  document
+    .querySelector("#addToPronoun")
+    .addEventListener("click", () => addWordTo(pronoun));
+  document
+    .querySelector("#addToAdj")
+    .addEventListener("click", () => addWordTo(adj));
+  document
+    .querySelector("#addToNoun")
+    .addEventListener("click", () => addWordTo(noun));
 
-  document.querySelector("#deleteFromPronoun").addEventListener("click", () => deleteWordFrom(pronoun));
-  document.querySelector("#deleteFromAdj").addEventListener("click", () => deleteWordFrom(adj));
-  document.querySelector("#deleteFromNoun").addEventListener("click", () => deleteWordFrom(noun));
+  document
+    .querySelector("#deleteFromPronoun")
+    .addEventListener("click", () => deleteWordFrom(pronoun));
+  document
+    .querySelector("#deleteFromAdj")
+    .addEventListener("click", () => deleteWordFrom(adj));
+  document
+    .querySelector("#deleteFromNoun")
+    .addEventListener("click", () => deleteWordFrom(noun));
 };
